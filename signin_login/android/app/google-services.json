@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "223244021993",
+    "project_id": "signin-login-project-1c392",
+    "storage_bucket": "signin-login-project-1c392.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223244021993:android:45d0e23fe43499d44e4078",
+        "android_client_info": {
+          "package_name": "com.kamohelontimane.signin_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzchKZ-l6OnDvpJ4FMD967bOqju3SCbqQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
