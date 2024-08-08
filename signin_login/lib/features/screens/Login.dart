@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'dashboard.dart';
@@ -40,6 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }
   }
+  bool hidePassword = true;
 
   @override
   Widget build(BuildContext context) {
@@ -105,23 +107,30 @@ class _LoginScreenState extends State<LoginScreen> {
                       return null;
                     },
                     controller: passwordController,
-                    decoration: const InputDecoration(
+                    obscureText: hidePassword,
+                    decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white10,
                       border: OutlineInputBorder(),
 
                       hintText: "Enter Password",
-                      hintStyle: TextStyle(
+                      hintStyle: const TextStyle(
                         color: Colors.grey,
                       ),
                       labelText: "Password",
-                      labelStyle: TextStyle(
+                      labelStyle: const TextStyle(
                         color: Colors.black,
                         fontSize: 18,
                       ),
 
                       prefixIcon: Icon(Icons.lock),
-                      suffixIcon: Icon(Icons.remove_red_eye),
+                      suffixIcon: GestureDetector(child: Icon(Icons.remove_red_eye),
+                        onTap: () {
+                          setState(() {
+                            hidePassword = !hidePassword;
+                          });
+                        },
+                      ),
                     ),
                   ),
                 ),
